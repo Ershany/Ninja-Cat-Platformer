@@ -79,21 +79,27 @@ public class Player extends Entity {
 	
 	public void init() {
 		hitbox = new Rectangle(pos.getIntX(), pos.getIntY(), width, height);
-		xVals = new float[5];
-		yVals = new float[5];
 		
-		for (int i = 0; i<= xVals.length-1; i++) {
-			xVals [i] = pos.getX() + width*((i+1)%2);			
-		}
+		xVals = new float[8];
+		yVals = new float[8];
 		
-		yVals [0] = pos.getY();
-		yVals [1] = pos.getY() + height;
-		yVals [2] = pos.getY() + height;
-		yVals [3] = pos.getY() + (height / 2);
-		yVals [4] = pos.getY() + (height / 2);
-		for (int i = 0; i<= xVals.length-1; i++) {
-			xVals [i] = pos.getX() + width*((i+1)%2);			
-		}
+		yVals[0] = pos.getY();
+		yVals[1] = pos.getY();
+		yVals[2] = pos.getY() + (height / 2);
+		yVals[3] = pos.getY() + (height / 2);
+		yVals[4] = pos.getY() + (height / 2);
+		yVals[5] = pos.getY() + height;
+		yVals[6] = pos.getY() + height;
+		yVals[7] = pos.getY() + height;
+		
+		xVals[0] = pos.getX() + (width / 2);
+		xVals[1] = pos.getX() + width;
+		xVals[2] = pos.getX();
+		xVals[3] = pos.getX() + (width / 2);
+		xVals[4] = pos.getX() + width;
+		xVals[5] = pos.getX();
+		xVals[6] = pos.getX() + (width / 2);
+		xVals[7] = pos.getX() + width;
 		
 		anim = new PlayerAnimate(this);
 	}

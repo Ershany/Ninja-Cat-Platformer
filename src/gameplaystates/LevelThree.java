@@ -133,7 +133,10 @@ public class LevelThree extends LevelState {
 
 	@Override
 	public void updatePortal() {
-		
+		if(portal1.getHitbox().intersects(player.getHitbox()) && portal1.getWorks()) {
+			gsm.getStates().pop();
+			gsm.getStates().push(new EndGameState(gsm));
+		}
 	}
 
 }

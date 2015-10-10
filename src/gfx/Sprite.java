@@ -67,6 +67,9 @@ public class Sprite {
 	public static Sprite demoRobot2 = new Sprite(1, 0, Spritesheet.demoRobot);
 	public static Sprite demoRobot3 = new Sprite(2, 0, Spritesheet.demoRobot);
 	
+	//Backgrounds
+	public static Sprite endingBackground = new Sprite("/backgrounds/background.bmp");
+	
 	private Spritesheet sheet;
 	private BufferedImage sprite;
 	private String path;

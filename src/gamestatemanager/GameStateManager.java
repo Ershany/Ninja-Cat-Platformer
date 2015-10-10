@@ -1,9 +1,9 @@
 package gamestatemanager;
 
-import game.Game;
-
 import java.awt.Graphics2D;
 import java.util.Stack;
+
+import gameplaystates.EndGameState;
 
 public class GameStateManager {
 
